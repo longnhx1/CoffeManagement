@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,8 +21,9 @@ namespace QuanLyQuanCafe.DAO
 
         private DataProvider(){}
 
-        private string connectionSTR = "Data Source=.\\sqlexpress;Initial Catalog=QuanLyQuanCafe;Integrated Security=True";
-        
+        private string connectionSTR = "Data Source=localhost;Initial Catalog = QuanLyQuanCafe; Integrated Security = True; TrustServerCertificate=True";
+
+
         public DataTable ExecuteQuery(string query, object[] parameter = null)
         {
             DataTable data = new DataTable();
